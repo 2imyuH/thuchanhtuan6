@@ -11,10 +11,10 @@
     <style type="text/css"> 
 
         body{
-            font-family: Arial, Verdana, sans-serif;font-size: 18px;
+            font-family: Arial, Verdana, sans-serif;font-size: 18px; background-image: url('https://img4.thuthuatphanmem.vn/uploads/2020/07/05/nen-background-cong-nghe-dep_035955535.jpg');
         }
         div{
-            border-bottom: 1px solid #efefef;
+            border-bottom: 1px solid none;
             margin: auto;
             padding-bottom: 10px;
             padding-top: 5px;
@@ -24,8 +24,9 @@
             width: 200px;
             text-align: right;
             padding-right: 10px;
-            color: black;
-            font-size: 18px;}
+            color:chartreuse;
+            font-size: 18px;
+            font-weight: 900;}
         .radio-buttons label{
             float: none; }
         .submit{
@@ -37,12 +38,14 @@
             -webkit-border-radius:5px;
             border-radius: 5px;
             background-color: #000;
-
-            color: #fff;
+            font-weight: 900;
+            color:chartreuse;
             text-shadow: 0 -1px 0 hsla(0,0%,0%,.8);
             font-size: 18px;
         }
-        span{color:red;font-size:14px}
+        span{color:red;font-size:14px;font-weight: 900;}
+        h2{color: chartreuse;font-weight: 900;}
+        h5{color: chartreuse;font-weight: 900;}
     </style>
     <script>
         function KiemTraTenDN(){
@@ -101,7 +104,7 @@
             {
                 var tt1=document.getElementById("txtName").value;
                 var tt2=document.getElementById("txtNS").value;
-                var w= open("FormValidation_info.html","KetQua");
+                var w= open("formdk.html","KetQua");
                 w.document.write("<B>THONG TIN CA NHAN</b>");
                 w.document.write("Ho ten: "+tt1+"<br>");
                 w.document.write("Nam sinh: "+tt2+"<br>");
@@ -111,33 +114,33 @@
 </head>
 <body>
     <h2 align="center">ĐĂNG KÍ TÀI KHOẢN</h2>;
-    <form name="form1" onsubmit="SubmitForm();" method="post" action="#">
+    <form name="form1" onsubmit="SubmitForm();" method="post" action="#" id="submitform">
 
         <div>
             <label for = "txtDN" class="title">Tên đăng nhập:</label>
             <input id="txtDN" onblur="return KiemTraTenDN();"type ="text"name="txtdn" size="30"
-                placeholder="txtDN" /><span id="tendn">*</span>
+                placeholder="huy123" /><span id="tendn">*</span>
         </div>
         <div>
             <label for = "txtMK" class="title">Mật khẩu:</label>
             <input id="txtMK" onblur="return KiemTraPassWord();"type ="password"name="txtMK" size="30"
-                placeholder="txtMK" /><span id="mk">*</span>
+                placeholder="huynguyen123" /><span id="mk">*</span>
         </div>
         <div>
             <label for = "txtXNMK" class="title">Nhập lại mật khẩu:</label>
             <input id="txtDXNMK" onblur="return KiemTraXacNhanPassword();"type ="password"name="txtXNMK" size="30"
-                placeholder="txtXNMK" /><span id="xnmk">*</span>
+                placeholder="Nhập lại mật khẩu trên" /><span id="xnmk">*</span>
         </div>
         <h5 align="center">THÔNG TIN CÁ NHÂN</h5>
         <div>
             <label for = "txtName" class="title">Họ và tên:</label>
             <input type="text" id="txtName" name="txtName" size="30"
-                placeholder="txtName"/><span id="hoten">*bắt buộc </span>
+                placeholder="Nguyen..."/><span id="hoten">*bắt buộc </span>
         </div>
         <div>
             <label for = "txtNS" class="title">Ngày sinh:</label>
-            <input id="date" id="txtNS" name="txtNS" size="30"
-                placeholder="txtNS"  onblur="return KiemTraNgaySinh();"/><span id="ngaysinh"> </span>
+            <input type="date" id="txtNS" name="txtNS" size="30"
+                placeholder="12,01,2002"  onblur="return KiemTraNgaySinh();"/><span id="ngaysinh"> </span>
         </div>
         <div class="radio-buttons">
             <span class="title">Giới tính:</span>
@@ -149,17 +152,17 @@
         <div>
             <label for="txtDC" class="title">Địa chỉ:</label>
             <input type="text" id="txtDC" name="txtDC" size="30"
-                   placeholder="txtDC"/><span id="diachi"></span>
+                   placeholder="TayNinh_VietNam"/><span id="diachi"></span>
         </div>
         <div>
             <label for="txtDT" class="title">Điện thoại:</label>
             <input type="text" id="txtDT" name="txtDT" size="30"
-                   placeholder="txtDT"/><span id="dienthoai">phải là số</span>
+                   placeholder="0352481065"/><span id="dienthoai">phải là số</span>
         </div>
         <div>
             <label for="txtEmail" class="title">Email:</label>
             <input type="email" id="txtEmail" name="txtEmail" size="30"
-                   placeholder="txtEmail"/><span id="email">nhập đúng địa chỉ email</span>
+                   placeholder="huynguyen@gmail.com"/><span id="email">nhập đúng địa chỉ email</span>
         </div>
 
         <div class="submit">
